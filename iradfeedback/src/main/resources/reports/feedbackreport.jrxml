@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.14.0.final using JasperReports Library version 6.14.0-2ab0d8625be255bf609c78e1181801213e51db8f  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="irad_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d0880949-519a-4782-961b-63c8139fb107">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Demo"/>
+	<parameter name="pageName" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+ *
+ FROM 
+user_master um,
+user_feedback uf
+WHERE
+um.user_mobile = uf.user_mobile
+AND
+uf.page_name=$P{pageName}]]>
+	</queryString>
+	<field name="user_dept" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="user_dept"/>
+		<property name="com.jaspersoft.studio.field.label" value="user_dept"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user_master"/>
+	</field>
+	<field name="user_designation" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="user_designation"/>
+		<property name="com.jaspersoft.studio.field.label" value="user_designation"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user_master"/>
+	</field>
+	<field name="user_email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="user_email"/>
+		<property name="com.jaspersoft.studio.field.label" value="user_email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user_master"/>
+	</field>
+	<field name="user_location" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="user_location"/>
+		<property name="com.jaspersoft.studio.field.label" value="user_location"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user_master"/>
+	</field>
+	<field name="user_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="user_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="user_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user_master"/>
+	</field>
+	<field name="user_state" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="user_state"/>
+		<property name="com.jaspersoft.studio.field.label" value="user_state"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user_master"/>
+	</field>
+	<field name="user_mobile" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="user_mobile"/>
+		<property name="com.jaspersoft.studio.field.label" value="user_mobile"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user_master"/>
+	</field>
+	<field name="feedback_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="feedback_type"/>
+		<property name="com.jaspersoft.studio.field.label" value="feedback_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user_feedback"/>
+	</field>
+	<field name="field_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="field_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="field_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user_feedback"/>
+	</field>
+	<field name="page_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="page_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="page_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user_feedback"/>
+	</field>
+	<field name="remark" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="remark"/>
+		<property name="com.jaspersoft.studio.field.label" value="remark"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user_feedback"/>
+	</field>
+	<field name="created_at" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.label" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user_feedback"/>
+	</field>
+	<group name="user_dept">
+		<groupExpression><![CDATA[$F{user_dept}]]></groupExpression>
+	</group>
+	<group name="user_designation">
+		<groupExpression><![CDATA[$F{user_designation}]]></groupExpression>
+	</group>
+	<group name="user_email">
+		<groupExpression><![CDATA[$F{user_email}]]></groupExpression>
+	</group>
+	<group name="user_location">
+		<groupExpression><![CDATA[$F{user_location}]]></groupExpression>
+	</group>
+	<group name="user_name">
+		<groupExpression><![CDATA[$F{user_name}]]></groupExpression>
+	</group>
+	<group name="user_state">
+		<groupExpression><![CDATA[$F{user_state}]]></groupExpression>
+	</group>
+	<group name="user_mobile">
+		<groupExpression><![CDATA[$F{user_mobile}]]></groupExpression>
+	</group>
+	<group name="feedback_type">
+		<groupExpression><![CDATA[$F{feedback_type}]]></groupExpression>
+	</group>
+	<group name="field_name">
+		<groupExpression><![CDATA[$F{field_name}]]></groupExpression>
+	</group>
+	<group name="page_name">
+		<groupExpression><![CDATA[$F{page_name}]]></groupExpression>
+	</group>
+	<group name="remark">
+		<groupExpression><![CDATA[$F{remark}]]></groupExpression>
+	</group>
+	<group name="created_at">
+		<groupExpression><![CDATA[$F{created_at}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="190" y="0" width="200" height="23" uuid="62595367-7926-48c7-8eff-d3af744eb7ab"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[iRad Feedback Report]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="39" width="595" height="1" uuid="38c860bc-3837-4391-ae94-ed7cf5e6b6c1"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="70" y="0" width="130" height="20" uuid="a1a88d6b-85f0-48ce-a915-24901ccf4cc0"/>
+				<textFieldExpression><![CDATA[$P{pageName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="20" uuid="6554e106-0315-4354-b859-4a9ec21e76a9"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Page Name :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="27" width="595" height="1" uuid="a530f24c-0fcc-480c-bfc5-661b27c0ac24"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="8" width="60" height="15" uuid="b669e67a-a326-465c-bc2a-df3d2293a5f0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84075726-f0a5-4407-99b1-b6642a1e53b9"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Field Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="9" width="58" height="14" uuid="d3bf5dbb-ad5b-4845-8c35-e602531a30e2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="caf2f692-8e16-4ab6-985a-5835859b28dc"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Remark]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="6" width="80" height="20" uuid="84be8200-ad99-4ffb-9227-49b3f39a5b2e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ddaa8307-f712-48d3-8e64-e79ee0088d72"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Officer Details]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="480" height="1" uuid="a148fa1f-236f-4618-83bb-2b88401b3b22"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="30" uuid="e0a7a80e-0768-4af8-baa7-42ec085d3eda"/>
+			</line>
+			<line>
+				<reportElement x="480" y="0" width="1" height="30" uuid="a1d69619-4072-4218-a268-3d83ac4c341b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="30" width="480" height="1" uuid="0caa1e47-b1d9-49a4-a758-78328e114984"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="62" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="70" height="16" uuid="b7c19022-f77e-439b-9ecd-55d6e9694afc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84075726-f0a5-4407-99b1-b6642a1e53b9"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{field_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="-1" width="78" height="28" uuid="89fbb29c-121f-463f-a92d-c09f8c1bab9e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="caf2f692-8e16-4ab6-985a-5835859b28dc"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{remark}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="2" width="195" height="40" uuid="5f4a8ed4-df83-47a1-960b-e1143fccc370">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ddaa8307-f712-48d3-8e64-e79ee0088d72"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{user_name}+","+$F{user_location}+","+
+$F{user_dept}+","+$F{user_state}+","+
+$F{user_mobile}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="-31" width="1" height="76" uuid="6c311485-ec60-4897-a993-a237491be4e6"/>
+			</line>
+			<line>
+				<reportElement x="80" y="-31" width="1" height="76" uuid="c61446f5-87e6-4780-9015-a33030f10338"/>
+			</line>
+			<line>
+				<reportElement x="178" y="-32" width="1" height="78" uuid="85d3a0e3-9ba8-486d-9fd4-2bcca1018a8b"/>
+			</line>
+			<line>
+				<reportElement x="481" y="-32" width="1" height="78" uuid="0919b128-8fb6-4f37-9c39-289d528c1bdd"/>
+			</line>
+			<line>
+				<reportElement x="0" y="45" width="481" height="1" uuid="93cacffb-70fb-4c24-881d-b2692b85264a"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="51" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
