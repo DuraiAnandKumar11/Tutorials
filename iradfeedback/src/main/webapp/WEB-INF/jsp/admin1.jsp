@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 Changed the files
+New Changed stage
 <html>
 <head>
   <title>Bootstrap Example</title>
